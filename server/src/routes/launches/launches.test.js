@@ -2,6 +2,7 @@ const request = require("supertest");
 const app = require("../../app");
 
 const { connectDB, disconnectDB } = require("../../services/mongo");
+const { loadPlanetsData } = require("../../models/planets.model");
 
 const completeLaunchData = {
   mission: "Kepler ExoPlanets Mission 1",
@@ -26,6 +27,7 @@ const incorrectLaunchDate = {
 describe("Launches Requests Tests", () => {
   beforeAll(async () => {
     await connectDB();
+    await loadPlanetsData();
   });
 
   afterAll(async () => {
