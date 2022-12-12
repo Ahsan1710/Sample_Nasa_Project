@@ -22,7 +22,8 @@
     "mongoose": "^6.6.5",
     "morgan": "^1.10.0",
     "pm2": "^5.2.0",
-    "sample_nasa_project": "file:.."
+    "sample_nasa_project": "file:..",
+    "superagent": "^8.0.0"
   },
   "devDependencies": {
     "jest": "^29.1.2",
